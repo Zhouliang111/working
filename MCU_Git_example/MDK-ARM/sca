@@ -1,0 +1,56 @@
+//==============================================================================
+//    S E N S I R I O N   AG,  Laubisruetistr. 50, CH-8712 Staefa, Switzerland
+//==============================================================================
+// Project   :  SHTC3 Sample Code (V1.0)
+// File      :  system.c (V1.0)
+// Author    :  RFU
+// Date      :  24-Nov-2017
+// Controller:  STM32F100RB
+// IDE       :  µVision V5.17.0.0
+// Compiler  :  Armcc
+// Brief     :  System functions
+//==============================================================================
+
+#include "system.h"
+
+//------------------------------------------------------------------------------
+//void DelayMicroSeconds(uint32_t nbrOfUs)  /* - adapt this delay for your uC - */
+//{
+//  for(uint32_t i = 0; i < nbrOfUs; i++) {
+//    for(uint32_t counter = 0;counter<10;counter++)
+//    __NOP;
+//  }
+//}
+
+
+void Delay1us(void)
+{
+  for(uint32_t counter = 0;counter<4;counter++)
+  __NOP;
+}
+
+void Delay3us(void)
+{
+  for(uint32_t counter = 0;counter<2;counter++)
+  for(uint32_t counter1 = 0;counter1<11;counter1++)
+  __NOP;
+}
+
+void Delay5us(void)
+{
+  for(uint32_t counter = 0;counter<4;counter++)
+  for(uint32_t counter1 = 0;counter1<10;counter1++)
+  __NOP;
+}
+void Delay10us(void)
+{
+  for(uint32_t counter = 0;counter<8;counter++)
+  for(uint32_t counter1 = 0;counter1<10;counter1++)
+  __NOP;
+}
+void Delay100us(void)
+  {
+  for(uint32_t counter = 0;counter<79;counter++)
+  for(uint32_t counter1 = 0;counter1<11;counter1++)
+  __NOP;
+}
